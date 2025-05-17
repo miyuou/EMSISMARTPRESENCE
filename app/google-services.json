@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "273528518510",
+    "project_id": "emsismartpresence-dc763",
+    "storage_bucket": "emsismartpresence-dc763.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273528518510:android:99ebb146848dcd4279337f",
+        "android_client_info": {
+          "package_name": "com.example.emsimarkpresence"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-TFuQjJmG61d0syRO_-JK9bas4GNtcDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
