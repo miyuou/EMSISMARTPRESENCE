@@ -1,4 +1,4 @@
-package com.example.emsimarkpresence;
+package com.example.emsismartpresence;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;

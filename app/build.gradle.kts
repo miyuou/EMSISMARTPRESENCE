@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.emsimarkpresence"
+    namespace = "com.example.emsismartpresence"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.emsimarkpresence"
+        applicationId = "com.example.emsismartpresence"
         minSdk = 29
         targetSdk = 35
         versionCode = 1

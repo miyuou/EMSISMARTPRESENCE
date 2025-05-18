@@ -1,4 +1,4 @@
-package com.example.emsimarkpresence;
+package com.example.emsismartpresence;
 
 import android.os.Bundle;
 
