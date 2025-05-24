@@ -64,7 +64,7 @@ public class AuthentifyYourself extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task->{
             if(task.isSuccessful()){
                 Toast.makeText(this, "Authentification réussie!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AuthentifyYourself.this, HomePage.class);
+                Intent intent = new Intent(AuthentifyYourself.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             } else {

@@ -47,6 +47,8 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.foundation.android)
+    implementation(libs.gridlayout)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -57,4 +59,5 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:20.0.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("org.json:json:20230227")
+    implementation ("com.github.sundeepk:compact-calendar-view:3.0.0")
 }
