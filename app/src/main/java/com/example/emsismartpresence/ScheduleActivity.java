@@ -1,7 +1,6 @@
 package com.example.emsismartpresence;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,10 +22,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class ScheduleActivity extends AppCompatActivity {
 
-    // UI Components (matching your XML exactly)
     private CompactCalendarView calendarView;
     private TextView selectedDateTextView;
     private TextView eventsTextView;
@@ -46,22 +45,21 @@ public class ScheduleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        // Initialize Firebase
+        // Initialisation Firebase
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        // Initialize views
+        // Initialisation des vues
         calendarView = findViewById(R.id.calendarView);
         selectedDateTextView = findViewById(R.id.selectedDateTextView);
         eventsTextView = findViewById(R.id.eventsTextView);
         notesEditText = findViewById(R.id.notesEditText);
         saveNoteButton = findViewById(R.id.saveNoteButton);
 
-        // Setup calendar
+        // Configuration du calendrier
         calendarView.setFirstDayOfWeek(Calendar.MONDAY);
         calendarView.setUseThreeLetterAbbreviation(true);
         calendarView.setCurrentDate(new Date());
-
         calendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override
             public void onDayClick(Date dateClicked) {
@@ -107,14 +105,12 @@ public class ScheduleActivity extends AppCompatActivity {
             String dateKey = dbDateFormat.format(date);
             db.collection("professors")
                     .document(user.getUid())
-                    .collection("schedule_notes")
+                    .collection("notes")
                     .document(dateKey)
                     .get()
                     .addOnSuccessListener(document -> {
                         if (document.exists()) {
                             notesEditText.setText(document.getString("note"));
-                        } else {
-                            notesEditText.setText("");
                         }
                     });
         }
@@ -125,24 +121,23 @@ public class ScheduleActivity extends AppCompatActivity {
         if (user != null && selectedDate != null) {
             String noteText = notesEditText.getText().toString().trim();
             String dateKey = dbDateFormat.format(selectedDate);
+
+            Map<String, Object> noteData = new HashMap<>();
+            noteData.put("note", noteText);
+            noteData.put("date", dateKey);
+
             DocumentReference noteRef = db.collection("professors")
                     .document(user.getUid())
-                    .collection("schedule_notes")
+                    .collection("notes")
                     .document(dateKey);
 
             if (noteText.isEmpty()) {
-                noteRef.delete()
-                        .addOnSuccessListener(aVoid -> updateCalendarMarker(false))
-                        .addOnFailureListener(e -> showToast("Erreur de suppression"));
+                noteRef.delete().addOnSuccessListener(aVoid -> updateCalendarMarker(false));
             } else {
-                noteRef.update("note", noteText, "date", dateKey)
-                        .addOnSuccessListener(aVoid -> updateCalendarMarker(true))
-                        .addOnFailureListener(e -> noteRef.set(
-                                new HashMap<String, Object>() {{
-                                    put("note", noteText);
-                                    put("date", dateKey);
-                                }}).addOnSuccessListener(aVoid -> updateCalendarMarker(true))
-                        );
+                noteRef.set(noteData).addOnSuccessListener(aVoid -> {
+                    updateCalendarMarker(true);
+                    Toast.makeText(this, "Note enregistrée", Toast.LENGTH_SHORT).show();
+                });
             }
         }
     }
@@ -150,13 +145,9 @@ public class ScheduleActivity extends AppCompatActivity {
     private void updateCalendarMarker(boolean hasNote) {
         calendarView.removeEvents(selectedDate);
         if (hasNote) {
-            Event event = new Event(ContextCompat.getColor(this, R.color.orbit_purple),
+            Event event = new Event(ContextCompat.getColor(this, R.color.purple_700),
                     selectedDate.getTime(), "Note");
             calendarView.addEvent(event);
         }
-    }
-
-    private void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

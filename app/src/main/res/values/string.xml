@@ -7,8 +7,8 @@
     <string name="presence">Présence</string>
     <string name="presence_desc">Icône présence</string>
 
-    <string name="annonces">Annonces</string>
-    <string name="annonces_desc">Icône annonces</string>
+    <string name="annonces">Rattrapages</string>
+    <string name="annonces_desc">Icône rattrapages</string>
     <string name="first_fragment_label">First Fragment</string>
 
     <string name="second_fragment_label">Second Fragment</string>
