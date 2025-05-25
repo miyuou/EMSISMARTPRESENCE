@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.foundation.android)
     implementation(libs.gridlayout)
     implementation(libs.firebase.storage)
+    implementation(libs.ads.mobile.sdk)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -59,5 +60,11 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:20.0.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("org.json:json:20230227")
+    implementation ("androidx.core:core:1.13.1")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("androidx.core:core-ktx:1.12.0")
+    implementation ("com.google.android.material:material:1.11.0")
+
+    // If you're using compactcalendarview, use the AndroidX version:0'
     implementation ("com.github.sundeepk:compact-calendar-view:3.0.0")
 }

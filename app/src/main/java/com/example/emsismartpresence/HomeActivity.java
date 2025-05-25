@@ -34,12 +34,14 @@ public class HomeActivity extends AppCompatActivity {
                 R.id.card_assistant,
                 R.id.card_proximite,
                 R.id.card_documents,
+                R.id.card_planning,
         };
 
         Class<?>[] activityClasses = {
                 Assistant_virtuel.class,
                 MapsActivity.class,
                 DocumentsActivity.class,
+                ScheduleActivity.class,
 
         };
 

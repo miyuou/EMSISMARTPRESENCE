@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Calendrier -->
     <com.github.sundeepk.compactcalendarview.CompactCalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
@@ -19,7 +18,6 @@
         app:compactCalendarCurrentDayBackgroundColor="@color/purple_700"
         app:compactCalendarMultiEventIndicatorColor="@color/purple_700"/>
 
-    <!-- Date sélectionnée -->
     <TextView
         android:id="@+id/selectedDateTextView"
         android:layout_width="match_parent"
@@ -29,7 +27,6 @@
         android:layout_marginTop="16dp"
         android:textStyle="bold"/>
 
-    <!-- Notes pour la date sélectionnée -->
     <EditText
         android:id="@+id/notesEditText"
         android:layout_width="match_parent"
@@ -39,7 +36,6 @@
         android:inputType="textMultiLine"
         android:gravity="top|start"/>
 
-    <!-- Bouton de sauvegarde -->
     <Button
         android:id="@+id/saveNoteButton"
         android:layout_width="match_parent"
@@ -49,7 +45,6 @@
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"/>
 
-    <!-- Événements de la date sélectionnée -->
     <TextView
         android:id="@+id/eventsTextView"
         android:layout_width="match_parent"
