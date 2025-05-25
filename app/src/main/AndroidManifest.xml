@@ -17,6 +17,12 @@
         android:theme="@style/Theme.EMSIMARKPRESENCE"
         tools:targetApi="31">
         <activity
+            android:name=".AddGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PresenceActivity"
+            android:exported="false" />
+        <activity
             android:name=".RattrapagesActivity"
             android:exported="false" />
         <activity

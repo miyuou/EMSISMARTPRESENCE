@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -31,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setupCardClickListeners() {
         int[] cardIds = {
+                R.id.card_presence,
                 R.id.card_assistant,
                 R.id.card_annonces,
                 R.id.card_proximite,
@@ -39,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         };
 
         Class<?>[] activityClasses = {
+                PresenceActivity.class,
                 Assistant_virtuel.class,
                 RattrapagesActivity.class,
                 MapsActivity.class,

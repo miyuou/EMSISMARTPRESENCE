@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".DocumentsActivity">
+    tools:context=".PresenceActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -35,61 +35,39 @@
             android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
+    <Button
+        android:id="@+id/choisirDateBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
+        android:text="Choisir la date"
+        android:layout_marginTop="8dp"/>
 
-        <EditText
-            android:id="@+id/nomEtudiant"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Nom"
-            android:inputType="text"/>
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Aucune date sélectionnée"
+        android:textSize="16sp"/>
 
-        <EditText
-            android:id="@+id/prenomEtudiant"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Prénom"
-            android:inputType="text"
-            android:layout_marginStart="8dp"/>
-
-        <Button
-            android:id="@+id/ajouterBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ajouter"
-            android:layout_marginStart="8dp"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/chargerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Charger la liste"
+        android:layout_marginTop="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewEtudiants"
+        android:id="@+id/recyclerViewPresence"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="16dp"/>
 
     <Button
-        android:id="@+id/sauvegarderBtn"
+        android:id="@+id/enregistrerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sauvegarder la liste"
+        android:text="Enregistrer les présences"
         android:layout_marginTop="16dp"/>
-
-    <Button
-        android:id="@+id/allerPresenceBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Aller à la gestion des présences"
-        android:layout_marginTop="8dp"/>
-    <Button
-        android:id="@+id/addGroupBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+ Add Group"
-        android:layout_marginTop="8dp"/>
 </LinearLayout>

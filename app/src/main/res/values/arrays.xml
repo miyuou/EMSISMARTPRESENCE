@@ -1,0 +1,14 @@
+<resources>
+    <string-array name="groupes_array">
+        <item>Groupe 1</item>
+        <item>Groupe 2</item>
+        <item>Groupe 3</item>
+
+    </string-array>
+
+    <string-array name="sites_array">
+        <item>centre</item>
+        <item>maarif</item>
+        <item>orangers</item>
+    </string-array>
+</resources>
