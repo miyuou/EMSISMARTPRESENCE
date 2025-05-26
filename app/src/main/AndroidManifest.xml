@@ -30,6 +30,9 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
+            android:name=".PresenceActivity"
+            android:exported="false" />
+        <activity
             android:name=".Assistant_virtuel"
             android:exported="false"
             android:theme="@style/Theme.EMSIMARKPRESENCE" />
@@ -41,6 +44,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBqvmPUD4no1818IX0EG7Y_pchcB0aHgtc" />
+        <activity
+            android:name=".RattrapagesActivity"
+            android:exported="false" />
 
         <activity
             android:name=".Register"

@@ -35,7 +35,9 @@ public class HomeActivity extends AppCompatActivity {
     private void setupCardClickListeners() {
 
         int[] cardIds = {
+                R.id.card_presence,
                 R.id.card_assistant,
+                R.id.card_rattrapage,
                 R.id.card_proximite,
                 R.id.card_documents,
                 R.id.card_planning,
@@ -43,7 +45,9 @@ public class HomeActivity extends AppCompatActivity {
         };
 
         Class<?>[] activityClasses = {
+                PresenceActivity.class,
                 Assistant_virtuel.class,
+                RattrapagesActivity.class,
                 MapsActivity.class,
                 DocumentsActivity.class,
                 ScheduleActivity.class,

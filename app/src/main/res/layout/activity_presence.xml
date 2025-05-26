@@ -92,81 +92,49 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Ajout d'étudiants -->
+
+    <!-- Date -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="16dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <Button
+            android:id="@+id/date_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginEnd="8dp">
+            android:text="Choisir date"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nomEtudiant"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nom"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
+            android:id="@+id/date_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/prenomEtudiant"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Prénom"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Aucune date sélectionnée"/>
     </LinearLayout>
 
     <Button
-        android:id="@+id/ajouterBtn"
+        android:id="@+id/load_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajouter étudiant"
-        android:layout_marginBottom="8dp"/>
+        android:text="Charger la liste"
+        android:layout_marginBottom="16dp"/>
 
     <!-- Liste des étudiants -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewEtudiants"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="16dp"/>
 
-    <!-- Boutons d'action -->
     <Button
-        android:id="@+id/sauvegarderBtn"
+        android:id="@+id/save_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enregistrer la liste"
-        android:layout_marginBottom="8dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/addGroupBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="Ajouter groupe"/>
-
-        <Button
-            android:id="@+id/allerPresenceBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:text="Gérer présence"/>
-    </LinearLayout>
+        android:text="Enregistrer la présence"/>
 </LinearLayout>

@@ -118,7 +118,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Card 2: Announcements -->
+                <!-- Card 2: Rattrapages -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_rattrapage"
                     android:layout_width="150dp"
@@ -148,7 +148,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Card 3: History -->
+                <!-- Card 3: Assistant Virtuel -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_assistant"
                     android:layout_width="150dp"
