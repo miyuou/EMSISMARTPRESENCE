@@ -2,25 +2,66 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding = "16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="8dp">
 
-    <EditText
-        android:id="@+id/prompt"
-        android:hint="Write your prompt Here..."
+    <!-- Chat Container -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="48sp"/>
-    <Button
-        android:id="@+id/btnSend"
-        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/geminianswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bubble_assistant"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="60dp"
+                android:elevation="1dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Input Area - Keeping your original IDs -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Envoyer"
-        android:layout_gravity="end"/>
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="8dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/geminianswer"
-        android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/prompt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Write your prompt Here..."
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:background="@null"
+            android:minHeight="48dp"/>
 
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Envoyer"
+            android:backgroundTint="#4285F4"
+            android:textColor="@android:color/white"
+            android:elevation="0dp"/>
+    </LinearLayout>
 </LinearLayout>

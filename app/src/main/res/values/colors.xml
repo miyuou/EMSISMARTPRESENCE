@@ -10,4 +10,6 @@
     <color name="orbit_orange">#FF9800</color>
     <color name="orbit_red">#F44336</color>
     <color name="orbit_purple">#9C27B0</color>
+    <color name="purple_light">#CE93D8</color>
+    <color name="purple_light_accent">#BA68C8</color>
 </resources>

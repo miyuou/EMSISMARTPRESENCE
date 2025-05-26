@@ -60,7 +60,7 @@ public class Register extends AppCompatActivity {
             }
         });
         linkToLogin.setOnClickListener(v->{
-            Intent intent = new Intent(Register.this,AuthentifyYourself.class);
+            Intent intent = new Intent(Register.this, Signin.class);
             startActivity(intent);
         });
     }
@@ -87,7 +87,7 @@ public class Register extends AppCompatActivity {
                         Toast.makeText(this, "Inscription réussie", Toast.LENGTH_SHORT).show();
                         userId = mAuth.getCurrentUser().getUid();
                         store_user_firestore(userId,email,fullname);
-                        Intent i=new Intent(Register.this, AuthentifyYourself.class);
+                        Intent i=new Intent(Register.this, Signin.class);
                         i.putExtra("name",fullname);
                         startActivity(i);
                         finish();

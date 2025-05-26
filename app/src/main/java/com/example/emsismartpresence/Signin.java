@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import androidx.activity.EdgeToEdge;
 
-public class AuthentifyYourself extends AppCompatActivity {
+public class Signin extends AppCompatActivity {
     private EditText etEmail, etPassword;
     private Button btnLogin;
     private TextView linkToRegister;
@@ -47,7 +47,7 @@ public class AuthentifyYourself extends AppCompatActivity {
             }
         });
         linkToRegister.setOnClickListener(v->{
-            Intent intent = new Intent(AuthentifyYourself.this,Register.class);
+            Intent intent = new Intent(Signin.this,Register.class);
             startActivity(intent);
         });
     }
@@ -64,7 +64,7 @@ public class AuthentifyYourself extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task->{
             if(task.isSuccessful()){
                 Toast.makeText(this, "Authentification réussie!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AuthentifyYourself.this, HomeActivity.class);
+                Intent intent = new Intent(Signin.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             } else {

@@ -1,0 +1,40 @@
+<resources>
+    <!-- Messages généraux -->
+    <string name="welcome_message">Bienvenue</string>
+    <string name="logo_user_desc">Logo utilisateur</string>
+
+    <!-- Cartes -->
+    <string name="presence">Présence</string>
+    <string name="presence_desc">Icône présence</string>
+
+    <string name="annonces">Rattrapage</string>
+    <string name="annonces_desc">Icône annonces</string>
+    <string name="first_fragment_label">First Fragment</string>
+
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="historique">Gemini</string>
+    <string name="historique_desc">Icône historique</string>
+
+    <string name="reclamations">Réclamations</string>
+    <string name="reclamations_desc">Icône réclamations</string>
+    <string name="my_documents">Documents</string>
+    <string name="proximite">Proximité</string>
+    <string name="proximite_desc">Icône proximité</string>
+
+    <string name="planning">Planning</string>
+    <string name="planning_desc">Icône planning</string>
+
+    <string name="documents">Documents</string>
+    <string name="documents_desc">Icône documents</string>
+
+    <string name="parametres">Paramètres</string>
+    <string name="parametres_desc">Icône paramètres</string>
+    <string name="profile_picture">Profile </string>
+    <string name="change_photo">Change Photo</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="save">Save Changes</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="name_field_desc">Field to enter your name</string>
+    <string name="email_field_desc">Your email address</string>
+</resources>
