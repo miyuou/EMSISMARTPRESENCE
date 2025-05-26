@@ -1,73 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".PresenceActivity">
+    android:padding="16dp">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:hint="Groupe">
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
 
-        <AutoCompleteTextView
-            android:id="@+id/groupeAutoComplete"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical"
+            android:padding="8dp">
 
-    <com.google.android.material.textfield.TextInputLayout
+
+            <!-- Site Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Site">
+
+                <AutoCompleteTextView
+                    android:id="@+id/site_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Filière Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Filière">
+
+                <AutoCompleteTextView
+                    android:id="@+id/filiere_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Année Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Année">
+
+                <AutoCompleteTextView
+                    android:id="@+id/annee_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Groupe Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Groupe">
+
+                <AutoCompleteTextView
+                    android:id="@+id/groupe_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Date -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:hint="Site"
-        android:layout_marginTop="8dp">
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
-        <AutoCompleteTextView
-            android:id="@+id/siteAutoComplete"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/date_btn"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="none"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_weight="1"
+            android:text="Choisir date"/>
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Aucune date sélectionnée"/>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/choisirDateBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Choisir la date"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/dateTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Aucune date sélectionnée"
-        android:textSize="16sp"/>
-
-    <Button
-        android:id="@+id/chargerBtn"
+        android:id="@+id/load_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Charger la liste"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Liste des étudiants -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPresence"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/enregistrerBtn"
+        android:id="@+id/save_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enregistrer les présences"
-        android:layout_marginTop="16dp"/>
+        android:text="Enregistrer la présence"/>
 </LinearLayout>

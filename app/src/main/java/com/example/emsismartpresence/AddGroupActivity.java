@@ -1,15 +1,13 @@
 package com.example.emsismartpresence;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -17,8 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddGroupActivity extends AppCompatActivity {
-    private EditText groupNameInput, centerInput;
     private FirebaseFirestore db;
+    private EditText siteInput, filiereInput, anneeInput, groupeInput;
+    private Button saveBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,34 +25,47 @@ public class AddGroupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_group);
 
         db = FirebaseFirestore.getInstance();
-        groupNameInput = findViewById(R.id.groupNameInput);
-        centerInput = findViewById(R.id.centerInput);
+        initViews();
+        setListeners();
+    }
 
-        Button saveBtn = findViewById(R.id.saveBtn);
+    private void initViews() {
+        siteInput = findViewById(R.id.site_input);
+        filiereInput = findViewById(R.id.filiere_input);
+        anneeInput = findViewById(R.id.annee_input);
+        groupeInput = findViewById(R.id.groupe_input);
+        saveBtn = findViewById(R.id.save_btn);
+    }
+
+    private void setListeners() {
         saveBtn.setOnClickListener(v -> saveGroup());
     }
 
     private void saveGroup() {
-        String groupName = groupNameInput.getText().toString().trim();
-        String center = centerInput.getText().toString().trim();
+        String site = siteInput.getText().toString().trim();
+        String filiere = filiereInput.getText().toString().trim();
+        String annee = anneeInput.getText().toString().trim();
+        String groupe = groupeInput.getText().toString().trim();
 
-        if (groupName.isEmpty() || center.isEmpty()) {
-            Toast.makeText(this, "Fill all fields", Toast.LENGTH_SHORT).show();
+        if (site.isEmpty() || filiere.isEmpty() || annee.isEmpty() || groupe.isEmpty()) {
+            Toast.makeText(this, "Remplissez tous les champs", Toast.LENGTH_SHORT).show();
             return;
         }
 
         Map<String, Object> group = new HashMap<>();
-        group.put("name", groupName);
-        group.put("center", center);
+        group.put("site", site);
+        group.put("filiere", filiere);
+        group.put("annee", annee);
+        group.put("groupe", groupe);
 
         db.collection("groups")
                 .add(group)
-                .addOnSuccessListener(docRef -> {
-                    Toast.makeText(this, "Group added!", Toast.LENGTH_SHORT).show();
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(this, "Groupe ajouté", Toast.LENGTH_SHORT).show();
+                    setResult(Activity.RESULT_OK);
                     finish();
                 })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                });
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Erreur: " + e.getMessage(), Toast.LENGTH_SHORT).show());
     }
 }
