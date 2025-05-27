@@ -1,6 +1,6 @@
 <resources>
     <!-- Messages généraux -->
-    <string name="welcome_message">Bienvenue</string>
+    <string name="welcome_message">EMSI Smart Presence</string>
     <string name="logo_user_desc">Logo utilisateur</string>
 
     <!-- Cartes -->
@@ -17,19 +17,19 @@
 
     <string name="reclamations">Réclamations</string>
     <string name="reclamations_desc">Icône réclamations</string>
-    <string name="my_documents">Documents</string>
+    <string name="my_documents">Gestion des Etudiants</string>
     <string name="proximite">Proximité</string>
     <string name="proximite_desc">Icône proximité</string>
 
     <string name="planning">Planning</string>
     <string name="planning_desc">Icône planning</string>
 
-    <string name="documents">Documents</string>
+    <string name="documents">Gestion des Etudiants</string>
     <string name="documents_desc">Icône documents</string>
 
     <string name="parametres">Paramètres</string>
     <string name="parametres_desc">Icône paramètres</string>
-    <string name="profile_picture">Profile </string>
+    <string name="profile_picture">Espace Utilisateur </string>
     <string name="change_photo">Change Photo</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
@@ -37,4 +37,6 @@
     <string name="name_hint">Enter your name</string>
     <string name="name_field_desc">Field to enter your name</string>
     <string name="email_field_desc">Your email address</string>
+    <string name="upload_pdf">Documents</string>
+    <string name="upload_desc">Upload document icon</string>
 </resources>

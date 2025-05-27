@@ -41,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
                 R.id.card_proximite,
                 R.id.card_documents,
                 R.id.card_planning,
+                R.id.card_upload_document,
 
         };
 
@@ -51,7 +52,8 @@ public class HomeActivity extends AppCompatActivity {
                 MapsActivity.class,
                 DocumentsActivity.class,
                 ScheduleActivity.class,
-                ProfileActivity.class,
+
+                UploadActivity.class,
 
         };
 
