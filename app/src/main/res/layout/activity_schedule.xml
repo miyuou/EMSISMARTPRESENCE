@@ -6,49 +6,68 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Navigation Mois -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/prevMonthButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="&lt;" />
+
+        <TextView
+            android:id="@+id/monthYearTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/nextMonthButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text=">" />
+    </LinearLayout>
+
+    <!-- Vue Calendrier -->
     <com.github.sundeepk.compactcalendarview.CompactCalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:compactCalendarTargetHeight="300dp"
-        app:compactCalendarTextSize="12sp"
-        app:compactCalendarBackgroundColor="@color/white"
-        app:compactCalendarTextColor="@color/black"
-        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/purple_700"
-        app:compactCalendarCurrentDayBackgroundColor="@color/purple_700"
-        app:compactCalendarMultiEventIndicatorColor="@color/purple_700"/>
+        app:compactCalendarCurrentDayBackgroundColor="@color/purple_500"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/purple_700" />
 
+    <!-- Date sélectionnée -->
     <TextView
         android:id="@+id/selectedDateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="18sp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"/>
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
 
-    <EditText
-        android:id="@+id/notesEditText"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:hint="Ajoutez une note pour cette date..."
-        android:inputType="textMultiLine"
-        android:gravity="top|start"/>
-
+    <!-- Bouton Ajouter Cours -->
     <Button
-        android:id="@+id/saveNoteButton"
+        android:id="@+id/addEventButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Enregistrer la note"
+        android:text="Ajouter un cours"
         android:backgroundTint="@color/purple_500"
-        android:textColor="@color/white"/>
+        android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/eventsTextView"
+    <!-- Liste des événements -->
+    <ListView
+        android:id="@+id/eventsListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="16sp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

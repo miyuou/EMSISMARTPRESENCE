@@ -13,6 +13,7 @@
     <color name="purple_light">#CE93D8</color>
     <color name="purple_light_accent">#BA68C8</color>
     <color name="red_500">#F44336</color>
+<<<<<<< HEAD
     <color name="chat_background">#FAFAFA</color>
     <color name="user_bubble">#4285F4</color>
     <color name="assistant_bubble">#E0E0E0</color>
@@ -20,5 +21,8 @@
     <color name="assistant_text">#000000</color>
     <color name="ai_bubble">#E6E6FA</color> <!-- Violet très clair -->
     <color name="ai_text">#4B0082</color> <!-- Indigo foncé pour le texte -->
+=======
+    <color name="gray">#c4c4c4</color>
+>>>>>>> db53e729d7c1948c43d94b6d8927709448a41382
 
 </resources>
