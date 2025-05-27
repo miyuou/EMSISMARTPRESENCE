@@ -13,6 +13,6 @@
     <color name="purple_light">#CE93D8</color>
     <color name="purple_light_accent">#BA68C8</color>
     <color name="red_500">#F44336</color>
-
+    <color name="gray">#c4c4c4</color>
 
 </resources>

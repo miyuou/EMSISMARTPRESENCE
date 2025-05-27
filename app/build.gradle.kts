@@ -34,6 +34,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
 
 dependencies {
@@ -67,4 +68,6 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
     // If you're using compactcalendarview, use the AndroidX version:0'
     implementation ("com.github.sundeepk:compact-calendar-view:3.0.0")
+    implementation ("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+
 }
