@@ -145,7 +145,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
                             // Ajout d'un point sur le calendrier
                             long timeInMillis = date.getTime();
-                            Event calendarEvent = new Event(getResources().getColor(R.color.purple_500), timeInMillis, eventText);
+                            Event calendarEvent = new Event(getResources().getColor(R.color.button_background), timeInMillis, eventText);
                             calendarView.addEvent(calendarEvent);
                         }
                         eventsAdapter.notifyDataSetChanged();

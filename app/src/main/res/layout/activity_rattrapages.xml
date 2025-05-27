@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/background_white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +18,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/gray_dark" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/addButton"
@@ -27,16 +29,15 @@
             android:layout_marginBottom="24dp"
             app:icon="@drawable/logo_emsi"
             app:iconGravity="start"
-            app:iconTint="@android:color/white"
-            app:backgroundTint="@color/purple_500"/>
+            app:iconTint="@color/button_text"
+            app:backgroundTint="@color/button_background" />
 
         <LinearLayout
             android:id="@+id/sessionsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:divider="@drawable/logo_emsi"
-            android:showDividers="middle"/>
-
+            android:divider="@color/gray_light"
+            android:showDividers="middle" />
     </LinearLayout>
 </ScrollView>

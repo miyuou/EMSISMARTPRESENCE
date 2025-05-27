@@ -37,10 +37,10 @@
     <string name="name_hint">Enter your name</string>
     <string name="name_field_desc">Field to enter your name</string>
     <string name="email_field_desc">Your email address</string>
-<<<<<<< HEAD
+
     <string name="upload_pdf">Documents</string>
     <string name="upload_desc">Upload document icon</string>
-=======
+
     <string name="app_name">Documents Professeur</string>
 
     <string-array name="document_types">
@@ -49,5 +49,5 @@
         <item>Fiche d\'émargement</item>
         <item>Document administratif</item>
     </string-array>
->>>>>>> db53e729d7c1948c43d94b6d8927709448a41382
+
 </resources>

@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
     app:cardElevation="4dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="@color/background_light">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/gray_dark" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:text="Modifier"
                 style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/button_background" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/deleteButton"
@@ -40,8 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="Supprimer"
                 app:backgroundTint="@color/red_500"
-                app:icon="@drawable/logo_emsi"
-                app:iconTint="@android:color/white"/>
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

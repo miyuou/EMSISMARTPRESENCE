@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp">
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="@color/teal_800"
+    app:strokeColor="@color/teal_700"
+    app:strokeWidth="1dp"
+    app:cardElevation="2dp">
 
-    <TextView
-        android:id="@+id/nomTextView"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="16sp"/>
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/prenomTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/nomTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
-    <CheckBox
-        android:id="@+id/presenceCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/prenomTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/presenceCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:buttonTint="@color/teal_200"
+            app:useMaterialThemeColors="false" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

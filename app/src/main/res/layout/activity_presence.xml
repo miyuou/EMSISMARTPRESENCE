@@ -4,27 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="@color/background_white">
 
-    <com.google.android.material.card.MaterialCardView
+    <!-- Titre -->
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Feuille de présence"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/gray_dark" />
+
+    <!-- Bloc formulaire -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         app:cardElevation="4dp"
-        android:layout_marginBottom="16dp">
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/background_light">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="16dp">
 
-
-            <!-- Site Dropdown -->
+            <!-- Dropdowns -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:hint="Site">
 
                 <AutoCompleteTextView
@@ -32,16 +46,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"
                     android:clickable="true"
                     android:focusable="false"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Filière Dropdown -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:hint="Filière">
 
                 <AutoCompleteTextView
@@ -49,17 +64,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"
                     android:clickable="true"
                     android:focusable="false"
                     android:enabled="false"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Année Dropdown -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:hint="Année">
 
                 <AutoCompleteTextView
@@ -67,12 +83,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"
                     android:clickable="true"
                     android:focusable="false"
                     android:enabled="false"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Groupe Dropdown -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
@@ -84,57 +101,87 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"
                     android:clickable="true"
                     android:focusable="false"
                     android:enabled="false"/>
             </com.google.android.material.textfield.TextInputLayout>
-
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
-
-    <!-- Date -->
-    <LinearLayout
+    <!-- Date sélection -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@color/background_light">
 
-        <Button
-            android:id="@+id/date_btn"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Choisir date"/>
+            android:orientation="horizontal"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/date_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:gravity="center"
-            android:text="Aucune date sélectionnée"/>
-    </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/date_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Choisir date"
+                android:backgroundTint="@color/button_background"
+                android:textColor="@color/button_text"
+                app:icon="@drawable/ic_calendar"
+                app:iconTint="@color/button_text"/>
 
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="Aucune date sélectionnée"
+                android:textColor="@color/gray_dark"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bouton charger -->
     <Button
         android:id="@+id/load_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Charger la liste"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primary_green_dark"
+        android:textColor="@color/button_text"/>
 
     <!-- Liste des étudiants -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="16dp"/>
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/background_light">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bouton enregistrer -->
     <Button
         android:id="@+id/save_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enregistrer la présence"/>
+        android:text="Enregistrer la présence"
+        android:backgroundTint="@color/primary_green_dark"
+        android:textColor="@color/button_text"/>
 </LinearLayout>

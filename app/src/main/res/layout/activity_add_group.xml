@@ -4,12 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="@color/background_white">
 
+    <!-- Titre -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Création de groupe"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray_dark"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Card contenant le formulaire -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/background_light"
         android:layout_marginBottom="16dp">
 
         <LinearLayout
@@ -23,13 +38,15 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:hint="Site">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/site_input"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Filière -->
@@ -37,13 +54,15 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:hint="Filière">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/filiere_input"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Année -->
@@ -51,13 +70,15 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 android:hint="Année">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/annee_input"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Groupe -->
@@ -71,15 +92,19 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/groupe_input"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_dark"
+                    android:textColorHint="@color/gray_dark"/>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Bouton enregistrer -->
             <Button
                 android:id="@+id/save_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enregistrer le groupe"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                android:backgroundTint="@color/primary_green_dark"
+                android:textColor="@color/button_text" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

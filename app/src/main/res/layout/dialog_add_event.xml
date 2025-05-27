@@ -1,23 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="@color/background_white">
 
     <EditText
         android:id="@+id/courseNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nom du cours"
-        android:inputType="textCapWords" />
+        android:inputType="textCapWords"
+        android:textColor="@color/gray_dark"
+        android:backgroundTint="@color/gray_medium" />
 
     <Button
         android:id="@+id/selectTimeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Sélectionner l'heure" />
+        android:text="Sélectionner l'heure"
+        android:backgroundTint="@color/button_background"
+        android:textColor="@color/button_text" />
 
     <TextView
         android:id="@+id/timeRangeText"
@@ -25,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Aucune heure sélectionnée"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/gray_dark" />
 
     <EditText
         android:id="@+id/notesInput"
@@ -34,5 +39,7 @@
         android:layout_marginTop="16dp"
         android:hint="Notes (optionnel)"
         android:inputType="textMultiLine"
-        android:minLines="3" />
+        android:minLines="3"
+        android:textColor="@color/gray_dark"
+        android:backgroundTint="@color/gray_medium" />
 </LinearLayout>

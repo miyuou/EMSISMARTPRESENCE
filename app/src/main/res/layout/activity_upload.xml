@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
+    android:background="@color/background_white"
     tools:context=".UploadActivity">
 
     <!-- Header Section -->
@@ -16,7 +17,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/gray_dark" />
 
     <!-- Main Content Card -->
     <androidx.cardview.widget.CardView
@@ -24,7 +26,8 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/background_light">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,7 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choisir un fichier PDF"
-                style="@style/Widget.AppCompat.Button.Colored"
+                android:backgroundTint="@color/button_background"
+                android:textColor="@color/button_text"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
@@ -47,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:text="Aucun fichier sélectionné"
                 android:textAlignment="center"
-                android:textColor="?android:attr/textColorSecondary"
+                android:textColor="@color/gray_dark"
                 android:layout_marginBottom="24dp"/>
 
             <!-- Upload Button -->
@@ -56,7 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Uploader le fichier"
-                style="@style/Widget.AppCompat.Button.Colored"
+                android:backgroundTint="@color/primary_green_dark"
+                android:textColor="@color/button_text"
                 android:enabled="false"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -75,8 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Formats acceptés : PDF (max 10MB)"
-        android:textColor="?android:attr/textColorSecondary"
+        android:textColor="@color/gray_medium"
         android:gravity="center"
         android:layout_marginTop="16dp"/>
-
 </LinearLayout>

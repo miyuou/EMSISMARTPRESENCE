@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.button.MaterialButton;
+
 import java.util.List;
 
 public class EtudiantAdapter extends RecyclerView.Adapter<EtudiantAdapter.EtudiantViewHolder> {
@@ -50,7 +52,7 @@ public class EtudiantAdapter extends RecyclerView.Adapter<EtudiantAdapter.Etudia
 
     static class EtudiantViewHolder extends RecyclerView.ViewHolder {
         TextView nomTextView, prenomTextView;
-        ImageButton deleteButton;
+        MaterialButton deleteButton;
 
         public EtudiantViewHolder(@NonNull View itemView, OnEtudiantClickListener listener) {
             super(itemView);
