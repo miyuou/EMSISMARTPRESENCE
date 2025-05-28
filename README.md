@@ -9,13 +9,13 @@ Ce dépôt contient tout le code source de l'application EMSI SmartPresence, ain
 
 
 
-👉 [Consulter le guide d'utilisation](./Guide-Utilisation-EmsiSmartPresence.pdf)
+👉 [Consulter le guide d'utilisation] Guide-Utilisation-EmsiSmartPresence.pdf
 
 
 ## 🎤 Présentation du projet
 
 La présentation du projet décrit les objectifs, les fonctionnalités principales, l'architecture technique, ainsi que les perspectives d’évolution.
 
-👉 [Voir la présentation du projet](./EMSI-SmartPresence-Projet-de-Developpement)
+👉 [Voir la présentation du projet] EMSI-SmartPresence-Projet-de-Developpement
 
 
